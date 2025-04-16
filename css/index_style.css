@@ -1,0 +1,157 @@
+body {
+    background-color: #474d59;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 5fr 0.5fr;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    text-align: center;
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* 네비게이션 */
+.menu_list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 20px;
+    background-color: #b7c6d6;
+    color: black;
+    font-size: 18px;
+    list-style: none;
+}
+
+nav ul li {
+    display: flex;
+}
+
+/* 로그인/회원가입 영역 */
+#verifying {
+    position: fixed;
+    border-radius: 50px;
+    left: 85%;
+    top: 92%;
+    background-color: gray;
+    padding: 10px;
+    width: 8%;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+/* 프로젝트 카드 */
+.project_cards {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #b7c6d6;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* 사이드바 */
+#summary,
+#stacks {
+    background-color: #b7c6d6;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* 푸터 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b7c6d6;
+    color: black;
+}
+
+/* 링크 */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: wheat;
+}
+
+@media screen and (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .menu_list {
+        flex-direction: column;
+        align-items: center;
+        font-size: 16px;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .project_cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    #verifying {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: auto;
+        left: auto;
+        top: auto;
+        border-radius: 30px;
+        padding: 10px 20px;
+        font-size: 14px;
+        z-index: 1000;
+        /* 다른 요소 위로 오게 */
+    }
+
+    #summary,
+    #stacks {
+        margin-top: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
